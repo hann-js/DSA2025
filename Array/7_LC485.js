@@ -15,4 +15,6 @@ var findMaxConsecutiveOnes = function (nums) {
     }
   }
   return Math.max(maxOneCount, oneCount);
+  // this is the part you should keep in mind else will miss the case when
+  // there are no zeros at the end of array
 };

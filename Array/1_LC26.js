@@ -1,7 +1,4 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
+//IMP
 //26. Remove Duplicates from Sorted Array
 var removeDuplicates = function (nums) {
   // Solution with with extra spaces
