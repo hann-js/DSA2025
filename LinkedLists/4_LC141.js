@@ -1,3 +1,5 @@
+//IMP
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -23,20 +25,15 @@ var hasCycle = function (head) {
   // }
   // return false
 
-  // another solution-floyd cycle detection algo
+  // another solution-floyd cycle detection algo--vvimp
   if (!head) return false;
   let fast = head.next; // otherwise it will collide in 1st element
   let slow = head;
 
-  while (slow != fast) {
-    if (slow == fast) {
-      break;
-    }
-    if (!fast || !fast.next) {
-      return false;
-    }
+  while (fast && fast.next) {
+    if (slow === fast) return true;
     slow = slow.next;
     fast = fast.next.next;
   }
-  return true;
+  return false;
 };
