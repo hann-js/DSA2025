@@ -36,4 +36,15 @@ var hasCycle = function (head) {
     fast = fast.next.next;
   }
   return false;
+  // the same floyd algo can also be written as
+  // while (true) {
+  //   if (!fast || !fast.next) {
+  //     return false;
+  //   }
+  //   if (slow == fast) {
+  //     return true;
+  //   }
+  //   slow = slow.next;
+  //   fast = fast.next.next;
+  // }
 };
