@@ -14,6 +14,9 @@
 var removeElements = function (head, val) {
   let dummy = new ListNode(); // this is a dummy node: ListNode is available in problem
   // else initialise with {val: undefined, next: head}
+  // the dummy node is used for the case when the initial node/s are equal to val and
+  // we have to delete them
+  // also, dummy node's next always points to the new head[if initial nodes were val]
   dummy.next = head;
   let prev = dummy;
   while (prev && prev.next) {
